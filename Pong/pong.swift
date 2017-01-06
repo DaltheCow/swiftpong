@@ -1,6 +1,7 @@
 import UIKit
 
 class pong: UIView {
+    //alternative method of making pong
     var shapePosX : CGFloat = 0
     var shapePosY : CGFloat = 0
     var xSpeed : CGFloat = 4
@@ -17,7 +18,8 @@ class pong: UIView {
     var move = false
     var startX : CGFloat = 0
     
-    override func awakeFromNib() {
+    //to reactive this version of pong uncomment this
+    /*override func awakeFromNib() {
         paddleWidth = width / 4
         paddleHeight = 20
         paddleX = width/2 - paddleWidth/2
@@ -55,7 +57,7 @@ class pong: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         move = false
-    }
+    }*/
     
     func update() {
 
@@ -95,7 +97,8 @@ class pong: UIView {
         }
     }
     
-    override func drawRect(rect: CGRect) {
+    //and uncomment this, also delete the images in Main.storyboard and comment out the code in there
+    /*override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         let context = UIGraphicsGetCurrentContext()
         CGContextSetLineWidth(context, 3.0)
@@ -117,5 +120,5 @@ class pong: UIView {
         CGContextSetFillColorWithColor(context,UIColor.blueColor().CGColor)
         CGContextFillPath(context)
         
-    }
+    }*/
 }

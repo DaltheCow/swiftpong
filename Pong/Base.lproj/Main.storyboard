@@ -16,13 +16,29 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Wyh-4m-qWo" customClass="pong" customModule="Pong" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="pongpaddle.png" translatesAutoresizingMaskIntoConstraints="NO" id="jeD-dg-CCc">
+                                <rect key="frame" x="96" y="521" width="128" height="27"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="pongball.png" translatesAutoresizingMaskIntoConstraints="NO" id="JZd-pP-j2r">
+                                <rect key="frame" x="151" y="171" width="18" height="17"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="ball" destination="JZd-pP-j2r" id="tZa-8N-r5b"/>
+                        <outlet property="paddle" destination="jeD-dg-CCc" id="zjG-7s-PZo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242" y="322"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pongball.png" width="18" height="17"/>
+        <image name="pongpaddle.png" width="128" height="27"/>
+    </resources>
 </document>
